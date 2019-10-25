@@ -11,7 +11,7 @@ class AppStateController extends Controller
     public function index()
     {
         $appStates = TblAppState::paginate(40);
-        return view('AppState.index', compact('appStates'));
+        return view('state.index', compact('appStates'));
     }
 
     public function update()
@@ -21,7 +21,7 @@ class AppStateController extends Controller
             ->update(['request_state'=> 500]);
         $appStates = TblAppState::paginate(40);
 
-        return view('AppState.index', compact('appStates'));
+        return view('state.index', compact('appStates'));
     }
 
 }
